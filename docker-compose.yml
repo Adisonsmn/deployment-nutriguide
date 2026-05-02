@@ -6,20 +6,17 @@ services:
       - "443:443"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       - backend
-      - frontend
+    restart: always
 
   backend:
-    image: <docker_username>/nutriguide-backend:latest
+    image: adisonsmn/nutriguide-backend:latest
     env_file:
       - .env
     depends_on:
       - db
-
-  frontend:
-    image: <docker_username>/nutriguide-frontend:latest
+    restart: always
 
   db:
     image: postgres:15-alpine
@@ -27,6 +24,7 @@ services:
       - .env
     volumes:
       - pgdata:/var/lib/postgresql/data
+    restart: always
 
 volumes:
   pgdata:
