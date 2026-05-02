@@ -1,0 +1,42 @@
+# Environment files
+.env
+.env.*
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Logs and runtime files
+*.log
+*.pid
+*.sock
+logs/
+pids/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python caches (if any)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules (if the project ever adds Node tooling)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Private keys and certificates
+*.key
+*.pem
+*.crt
