@@ -11,7 +11,7 @@ services:
     restart: always
 
   backend:
-    image: adisonsmn/nutriguide-backend:latest
+    image: son07/nutriguide-backend:latest
     env_file:
       - .env
     depends_on:
