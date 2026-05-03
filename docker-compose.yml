@@ -9,6 +9,7 @@ services:
       - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       - backend
+      - frontend
     restart: always
     networks:
       - app-network
