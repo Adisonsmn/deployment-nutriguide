@@ -23,6 +23,12 @@ services:
     networks:
       - app-network
 
+  frontend:
+    image: son07/nutriguide-frontend:latest
+    restart: always
+    networks:
+      - app-network
+
   db:
     image: postgres:15-alpine
     env_file:
